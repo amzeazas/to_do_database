@@ -20,7 +20,7 @@ describe(Task) do
 
   describe('#save') do
     it('adds a task to a list of saved tasks') do
-      test_task = Task.new({:description => "learn SQL"})
+      test_task = Task.new({:description => "learn SQL", :list_id => 1}})
       test_task.save()
       expect(Task.all()).to(eq([test_task]))
     end
