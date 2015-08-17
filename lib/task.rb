@@ -21,7 +21,7 @@ class Task
   end
 
   define_method(:save) do
-    @@all_tasks.push(self)
+    DB.exec("INSERT INTO tasks (description) VALUES ('#{@description}');")
   end
 
   define_singleton_method(:clear) do
