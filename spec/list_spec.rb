@@ -44,7 +44,7 @@ describe(List) do
       test_list.save()
       test_list2 = List.new({:name => "Home stuff", :id => nil})
       test_list2.save()
-      expect(List.find(test_list2())).to(eq(test_list2))
+      expect(List.find(test_list2.id())).to(eq(test_list2))
     end
   end
 
